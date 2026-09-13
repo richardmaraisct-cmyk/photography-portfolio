@@ -1,4 +1,14 @@
-@import "tailwindcss";
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("/fonts/Akira Expanded Demo.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-akira {
+  font-family: "Akira Expanded", sans-serif;
+}@import "tailwindcss";
 
 :root {
   --background: #ffffff;

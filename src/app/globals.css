@@ -8,6 +8,27 @@
 
 .font-akira {
   font-family: "Akira Expanded", sans-serif;
+  position: relative;
+}
+
+.font-akira::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 20% 30%,
+      transparent 0,
+      transparent 1px,
+      rgba(247, 244, 237, 0.22) 1.2px,
+      transparent 1.5px
+    );
+
+  background-size: 5px 5px;
+  mix-blend-mode: screen;
+  opacity: 0.35;
 }@import "tailwindcss";
 
 :root {

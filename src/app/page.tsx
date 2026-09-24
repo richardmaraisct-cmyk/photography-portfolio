@@ -11,17 +11,14 @@ export default function Home() {
 
     <span className="h-6 w-px bg-[#1717E8]" />
 
-    <a href="#about" className="pl-4">
-      ABOUT
-    </a>
+   <a href="/about" className="pl-4">
+  ABOUT
+</a>
   </div>
 
-  <a
-    href="#contact"
-    className="font-akira text-lg"
-  >
-    CONTACT
-  </a>
+<a href="#contact" className="font-akira text-lg">
+  CONTACT
+</a>
 
 </nav>
 

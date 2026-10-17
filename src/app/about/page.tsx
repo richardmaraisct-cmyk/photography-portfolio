@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -7,22 +8,25 @@ export default function About() {
 
   return (
     <main
-  className="min-h-screen bg-[#F7F4ED] text-[#1717E8] px-3 pt-3 pb-24"
-  onMouseMove={(event) => {
-  const image = document.getElementById("about-image");
+      className="min-h-screen text-[#1717E8] px-3 pt-3 pb-24"
+      onMouseMove={(event) => {
+        const image = document.getElementById("about-image");
 
-  if (!image) return;
+        if (!image) return;
 
-  const rect = image.getBoundingClientRect();
+        const rect = image.getBoundingClientRect();
 
-  const position =
-    ((event.clientX - rect.left) / rect.width) * 100;
+        const position =
+          ((event.clientX - rect.left) / rect.width) * 100;
 
-  const clampedPosition = Math.max(0, Math.min(100, position));
+        const clampedPosition = Math.max(
+          0,
+          Math.min(100, position)
+        );
 
-  setReveal(clampedPosition);
-}}
->
+        setReveal(clampedPosition);
+      }}
+    >
       {/* Navigation */}
       <nav className="flex items-start justify-between">
         <a href="/" className="font-akira text-lg">
@@ -45,7 +49,7 @@ export default function About() {
       {/* About */}
       <section className="mx-auto mt-28 max-w-[1500px] px-[5vw]">
         <div className="grid items-start gap-16 md:grid-cols-[0.8fr_1.2fr]">
-          
+
           {/* Text */}
           <div>
             <h1 className="font-akira text-[46px] leading-none md:text-[56px]">
@@ -55,8 +59,8 @@ export default function About() {
             <div
               className="mt-12 max-w-[520px] text-[17px] leading-[1.55] tracking-[-0.01em]"
               style={{
-                fontFamily: "Helvetica, Arial, sans-serif",
-                fontWeight: 400,
+                fontFamily: '"Helvetica Neue Custom", Arial, sans-serif',
+                fontWeight: 300,
               }}
             >
               <p>
@@ -73,9 +77,9 @@ export default function About() {
 
           {/* Invisible image reveal */}
           <div
-  id="about-image"
-  className="relative w-full overflow-hidden"
->
+            id="about-image"
+            className="relative w-full overflow-hidden"
+          >
             <img
               src="/photos/about1.JPG"
               alt=""
@@ -95,6 +99,7 @@ export default function About() {
               />
             </div>
           </div>
+
         </div>
       </section>
     </main>
